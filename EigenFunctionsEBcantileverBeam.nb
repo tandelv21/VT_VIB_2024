@@ -1,0 +1,985 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37281,        977]
+NotebookOptionsPosition[     36651,        960]
+NotebookOutlinePosition[     37026,        976]
+CellTagsIndexPosition[     36983,        973]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[Phi]", "1"], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["C", "1"], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cosh", "[", 
+         RowBox[{"\[Beta]", " ", "y"}], "]"}], " ", "-", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"\[Beta]", " ", "y"}], "]"}]}], ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["C", "2"], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sinh", "[", 
+         RowBox[{"\[Beta]", " ", "y"}], "]"}], " ", "-", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"\[Beta]", " ", "y"}], "]"}]}], ")"}]}]}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    SubscriptBox["\[Phi]", "2"], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["C", "5"], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cosh", "[", 
+         RowBox[{"\[Beta]", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "y"}], ")"}]}], "]"}], " ", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"\[Beta]", "*", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "y"}], ")"}]}], "]"}]}], ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["C", "6"], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sinh", "[", 
+         RowBox[{"\[Beta]", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "y"}], ")"}]}], "]"}], "+", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"\[Beta]", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "y"}], ")"}]}], "]"}]}], ")"}]}]}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.9253467620844593`*^9, 3.9253467805998363`*^9}, {
+  3.9253468166899934`*^9, 3.925346849684365*^9}, {3.925346917443325*^9, 
+  3.9253469473733473`*^9}, {3.9433415262215433`*^9, 
+  3.9433415710166054`*^9}},ExpressionUUID->"151cf854-c223-491c-b70d-\
+0a03f162f40b"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["C", "1"], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["C", "6"]}], "*", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], "+", 
+        RowBox[{
+         RowBox[{"Cosh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Beta]", "]"}], "+", 
+           RowBox[{
+            RowBox[{"Sin", "[", 
+             RowBox[{"\[Beta]", "-", 
+              RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+            RowBox[{"Sinh", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "-", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "+", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "+", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"\[Beta]", "-", 
+           RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"\[Beta]", "-", 
+              RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+            RowBox[{"Cosh", "[", 
+             RowBox[{"\[Beta]", "-", 
+              RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"Sin", "[", 
+             RowBox[{"\[Beta]", "-", 
+              RowBox[{"e", " ", "\[Beta]"}]}], "]"}], " ", 
+            RowBox[{"Sinh", "[", 
+             RowBox[{"\[Beta]", "-", 
+              RowBox[{"e", " ", "\[Beta]"}]}], "]"}]}]}], ")"}]}]}], ")"}]}], 
+     " ", ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+      RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cosh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+          RowBox[{"Cos", "[", "\[Beta]", "]"}]}], "+", 
+         RowBox[{"Sin", "[", "\[Beta]", "]"}], "-", 
+         RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], ")"}]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       SuperscriptBox[
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"2", " ", "e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+      RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+      RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+       RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+       SuperscriptBox[
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cosh", "[", "\[Beta]", "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "+", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "+", 
+         RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+          RowBox[{"Cosh", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{
+             RowBox[{"Sin", "[", 
+              RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+             RowBox[{"Sinh", "[", 
+              RowBox[{"e", " ", "\[Beta]"}], "]"}]}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9433414851275606`*^9, 3.943341496536148*^9}, {
+  3.9433416746388235`*^9, 
+  3.943341683689381*^9}},ExpressionUUID->"a2af49db-a5e7-43a2-870a-\
+eacf9112a8fa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["C", "2"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["C", "6"]}], "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "\[Alpha]"}], " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"]}], 
+       "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], "2"], 
+        " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "e"}], ")"}], " ", "\[Beta]"}], "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}]}], ")"}]}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{
+  3.911556201799198*^9, {3.9115562329248743`*^9, 3.9115562351749287`*^9}, {
+   3.9115588401038947`*^9, 3.911558847950292*^9}, 3.9115592115561624`*^9, {
+   3.9253462299793034`*^9, 3.925346234490245*^9}, {3.9253463748321905`*^9, 
+   3.9253463851892815`*^9}, 3.9253464273235626`*^9, {3.9253469877947893`*^9, 
+   3.9253469882390027`*^9}, {3.9433416909620357`*^9, 
+   3.9433416930178237`*^9}},ExpressionUUID->"7c133c1d-9362-4936-8dd8-\
+a289abfef331"],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   SubscriptBox["C", "5"], "=", 
+   RowBox[{
+    SubscriptBox["C", "6"], "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Beta]", "]"}]}], "+", 
+        RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Cos", "[", "\[Beta]", "]"}]}], "+", 
+           RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+            RowBox[{"Sin", "[", "\[Beta]", "]"}]}], "+", 
+           RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+            RowBox[{"Sinh", "[", "\[Beta]", "]"}]}]}], ")"}]}], "+", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+         SuperscriptBox[
+          RowBox[{"Cos", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"2", " ", "e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Cosh", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"Cosh", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+           RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+           RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+            SuperscriptBox[
+             RowBox[{"Cosh", "[", 
+              RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+           RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+            RowBox[{"Sinh", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+           RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+            SuperscriptBox[
+             RowBox[{"Sinh", "[", 
+              RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}]}], ")"}]}], "-", 
+        RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+         RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"2", " ", "e", " ", "\[Beta]"}], "]"}]}]}], ")"}], " ", 
+      ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sin", "[", "\[Beta]", "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+           RowBox[{"Cos", "[", "\[Beta]", "]"}]}], "+", 
+          RowBox[{"Sin", "[", "\[Beta]", "]"}], "-", 
+          RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cosh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", "\[Beta]", "]"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sin", "[", "\[Beta]", "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Cos", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", "e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "-", 
+       RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+        RowBox[{"Sinh", "[", "\[Beta]", "]"}], " ", 
+        SuperscriptBox[
+         RowBox[{"Sinh", "[", 
+          RowBox[{"e", " ", "\[Beta]"}], "]"}], "2"]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cosh", "[", "\[Beta]", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"e", " ", "\[Beta]"}], "]"}]}], "+", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}], "+", 
+          RowBox[{"Sinh", "[", 
+           RowBox[{"e", " ", "\[Beta]"}], "]"}], "+", 
+          RowBox[{"\[Alpha]", " ", "\[Beta]", " ", 
+           RowBox[{"Cosh", "[", 
+            RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{
+              RowBox[{"Sin", "[", 
+               RowBox[{"e", " ", "\[Beta]"}], "]"}], " ", 
+              RowBox[{"Sinh", "[", 
+               RowBox[{"e", " ", "\[Beta]"}], "]"}]}]}], ")"}]}]}], ")"}]}]}],
+       ")"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9433416307388983`*^9, 
+  3.9433416441150227`*^9}},ExpressionUUID->"628c976e-3826-4222-988f-\
+952a7c1b6ce5"]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{1912, Automatic}, {Automatic, -8}},
+Magnification:>1.1 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1807, 55, 55, "Input",ExpressionUUID->"151cf854-c223-491c-b70d-0a03f162f40b"],
+Cell[2368, 77, 7824, 197, 178, "Input",ExpressionUUID->"a2af49db-a5e7-43a2-870a-eacf9112a8fa"],
+Cell[10195, 276, 17167, 461, 253, "Input",ExpressionUUID->"7c133c1d-9362-4936-8dd8-a289abfef331"],
+Cell[27365, 739, 9282, 219, 206, InheritFromParent,ExpressionUUID->"628c976e-3826-4222-988f-952a7c1b6ce5"]
+}
+]
+*)
+
